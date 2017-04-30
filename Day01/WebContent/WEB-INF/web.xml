@@ -6,9 +6,22 @@
  		<servlet-name>helloServlet</servlet-name>
  		<!-- Servlet的全类名 -->
  		<servlet-class>com.cx.javaweb.HelloServlet</servlet-class>
+ 		
+ 		<!-- 配置Servlet的初始化参数 -->
+ 		<init-param>
+ 			<!-- 参数名 -->
+ 			<param-name>user</param-name>
+ 			<!-- 参数值 -->
+ 			<param-value>root</param-value>
+ 		</init-param>
+ 		<init-param>
+ 			<param-name>password</param-name>
+ 			<param-value>123456</param-value>
+ 		</init-param>
  		<!-- 可以指定Servlet被创建的时机 -->
  		<load-on-startup>-1</load-on-startup>
  	</servlet>
+ 	
  	<servlet>
  		<!-- Servlet注册的名字 -->
  		<servlet-name>secondServlet</servlet-name>
