@@ -5,9 +5,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="loginServlet" method="post">
+	<form action="loginServlet" method="get">
 		user:<input type="text" name="user"/>
 		password:<input type="password" name="password"/>
+		<br/>
+		instersting:
+		<input type="checkbox" name="instersting" value="reading" />Reading
+		<input type="checkbox" name="instersting" value="game" />Game
+		<input type="checkbox" name="instersting" value="party" />Party
 		<input type="submit" value="Submit">
 	</form>
 </body>

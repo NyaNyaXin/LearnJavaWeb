@@ -42,6 +42,16 @@
  		<load-on-startup>2</load-on-startup>
  	</servlet>
  	
+ 	<servlet>
+ 		<!-- Servlet注册的名字 -->
+ 		<servlet-name>loginServlet</servlet-name>
+ 		<!-- Servlet的全类名 -->
+ 		<servlet-class>com.cx.javaweb.LoginServlet</servlet-class>
+ 		<!-- 可以指定Servlet被创建的时机 -->
+ 		<load-on-startup>2</load-on-startup>
+ 	</servlet>
+ 	
+ 	
  	<servlet-mapping>
  		<!-- 需要和某一个servlet节点的servlet-name子节点的文本节点一致 -->
  		<servlet-name>helloServlet</servlet-name>
@@ -55,10 +65,10 @@
  		<!-- 映射具体的访问路径：/代表当前web应用的根目录 -->
  		<url-pattern>/hello2</url-pattern>
  	</servlet-mapping>
- 	<!-- 
+ 	 
  	<servlet-mapping>
- 		<servlet-name>secondServlet</servlet-name>
- 		<url-pattern>*.html</url-pattern>
+ 		<servlet-name>loginServlet</servlet-name>
+ 		<url-pattern>/loginServlet</url-pattern>
  	</servlet-mapping>
- 	 -->
+ 	
 </web-app>
