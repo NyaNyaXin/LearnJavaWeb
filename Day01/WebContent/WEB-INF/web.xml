@@ -55,11 +55,10 @@
  		<!-- 映射具体的访问路径：/代表当前web应用的根目录 -->
  		<url-pattern>/hello2</url-pattern>
  	</servlet-mapping>
- 	
+ 	<!-- 
  	<servlet-mapping>
- 		<!-- 需要和某一个servlet节点的servlet-name子节点的文本节点一致 -->
  		<servlet-name>secondServlet</servlet-name>
- 		<!-- 映射具体的访问路径：/代表当前web应用的根目录 -->
  		<url-pattern>*.html</url-pattern>
  	</servlet-mapping>
+ 	 -->
 </web-app>
