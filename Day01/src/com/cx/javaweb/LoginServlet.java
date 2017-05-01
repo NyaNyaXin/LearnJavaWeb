@@ -1,6 +1,7 @@
 package com.cx.javaweb;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Map;
@@ -71,6 +72,12 @@ public class LoginServlet implements Servlet{
 		
 		String servletPath = httpServletRequest.getServletPath();
 		System.out.println(servletPath);
+		
+		arg1.setContentType("application/msword");
+		
+		PrintWriter out = arg1.getWriter();
+		out.print("hello.....");
+		
 		
 	}
 
