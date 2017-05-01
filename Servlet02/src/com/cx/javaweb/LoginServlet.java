@@ -7,6 +7,7 @@ import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 public class LoginServlet extends GenericServlet {
 	
@@ -18,6 +19,12 @@ public class LoginServlet extends GenericServlet {
 
 	@Override
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		
+		//获取请求方式是GET还是POST
+		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+		String method = httpServletRequest.getMethod();
+		System.out.println(method);
+		
 		// 1.获取请求参数username,password
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
