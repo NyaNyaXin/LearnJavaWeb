@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <!-- 配置当前WEB应用的初始化参数-->
   <context-param>
-  	<param-name>user</param-name>
-  	<param-value>chenxin</param-value>
+    <param-name>user</param-name>
+    <param-value>chenxin</param-value>
   </context-param>
-  
   <context-param>
-  	<param-name>password</param-name>
-  	<param-value>123456</param-value>
+    <param-name>password</param-name>
+    <param-value>123456</param-value>
   </context-param>
-  
-  <!-- 配置Servlet -->
   <servlet>
-  	<servlet-name>loginServlet</servlet-name>
-  	<servlet-class>com.cx.javaweb.LoginServlet3</servlet-class>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.cx.javaweb.LoginServlet3</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>loginServlet</servlet-name>
-  	<url-pattern>/loginServlet</url-pattern>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
 </web-app>
