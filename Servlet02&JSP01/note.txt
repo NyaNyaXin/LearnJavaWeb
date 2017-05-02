@@ -1,37 +1,37 @@
-7. MVC Éè¼ÆÄ£Ê½. 
+7. MVC è®¾è®¡æ¨¡å¼. 
 
-6. ºÍÊôĞÔÏà¹ØµÄ·½·¨:
+6. å’Œå±æ€§ç›¸å…³çš„æ–¹æ³•:
 
-1). ·½·¨
+1). æ–¹æ³•
 
-void setAttribute(String name, Object o): ÉèÖÃÊôĞÔ  
-Object getAttribute(String name): »ñÈ¡Ö¸¶¨µÄÊôĞÔ
+void setAttribute(String name, Object o): è®¾ç½®å±æ€§  
+Object getAttribute(String name): è·å–æŒ‡å®šçš„å±æ€§
 
-Enumeration getAttributeNames(): »ñÈ¡ËùÓĞµÄÊôĞÔµÄÃû×Ö×é³ÉµÄ Enumeration ¶ÔÏó
-removeAttribute(String name): ÒÆ³ıÖ¸¶¨µÄÊôĞÔ 
+Enumeration getAttributeNames(): è·å–æ‰€æœ‰çš„å±æ€§çš„åå­—ç»„æˆçš„ Enumeration å¯¹è±¡
+removeAttribute(String name): ç§»é™¤æŒ‡å®šçš„å±æ€§ 
 
-2). pageContext, request, session, application ¶ÔÏó¶¼ÓĞÕâĞ©·½·¨!
-ÕâËÄ¸ö¶ÔÏóÒ²³ÆÖ®ÎªÓò¶ÔÏó. 
+2). pageContext, request, session, application å¯¹è±¡éƒ½æœ‰è¿™äº›æ–¹æ³•!
+è¿™å››ä¸ªå¯¹è±¡ä¹Ÿç§°ä¹‹ä¸ºåŸŸå¯¹è±¡. 
 
-pageContext: ÊôĞÔµÄ×÷ÓÃ·¶Î§½öÏŞÓÚµ±Ç° JSP Ò³Ãæ
-request:  ÊôĞÔµÄ×÷ÓÃ·¶Î§½öÏŞÓÚÍ¬Ò»¸öÇëÇó. 
-session: ÊôĞÔµÄ×÷ÓÃ·¶Î§ÏŞÓÚÒ»´Î»á»°: ä¯ÀÀÆ÷´ò¿ªÖ±µ½¹Ø±Õ³ÆÖ®ÎªÒ»´Î»á»°(ÔÚ´ËÆÚ¼ä»á»°²»Ê§Ğ§)
-application: ÊôĞÔµÄ×÷ÓÃ·¶Î§ÏŞÓÚµ±Ç° WEB Ó¦ÓÃ. ÊÇ·¶Î§×î´óµÄÊôĞÔ×÷ÓÃ·¶Î§, Ö»ÒªÔÚÒ»´¦ÉèÖÃÊôĞÔ, ÔÚÆäËû¸÷´¦µÄ JSP »ò Servlet ÖĞ
-¶¼¿ÉÒÔ»ñÈ¡µ½. 
+pageContext: å±æ€§çš„ä½œç”¨èŒƒå›´ä»…é™äºå½“å‰ JSP é¡µé¢
+request:  å±æ€§çš„ä½œç”¨èŒƒå›´ä»…é™äºåŒä¸€ä¸ªè¯·æ±‚. 
+session: å±æ€§çš„ä½œç”¨èŒƒå›´é™äºä¸€æ¬¡ä¼šè¯: æµè§ˆå™¨æ‰“å¼€ç›´åˆ°å…³é—­ç§°ä¹‹ä¸ºä¸€æ¬¡ä¼šè¯(åœ¨æ­¤æœŸé—´ä¼šè¯ä¸å¤±æ•ˆ)
+application: å±æ€§çš„ä½œç”¨èŒƒå›´é™äºå½“å‰ WEB åº”ç”¨. æ˜¯èŒƒå›´æœ€å¤§çš„å±æ€§ä½œç”¨èŒƒå›´, åªè¦åœ¨ä¸€å¤„è®¾ç½®å±æ€§, åœ¨å…¶ä»–å„å¤„çš„ JSP æˆ– Servlet ä¸­
+éƒ½å¯ä»¥è·å–åˆ°. 
 
 
 5. JSP:
 
 1). WHY: 
 
-JSP ÊÇ¼ò Servlet ±àĞ´µÄÒ»ÖÖ¼¼Êõ, Ëü½« Java ´úÂëºÍ HTML Óï¾ä»ìºÏÔÚÍ¬Ò»¸öÎÄ¼şÖĞ±àĞ´,
-Ö»¶ÔÍøÒ³ÖĞµÄÒª¶¯Ì¬²úÉúµÄÄÚÈİ²ÉÓÃ Java ´úÂëÀ´±àĞ´£¬¶ø¶Ô¹Ì¶¨²»±äµÄ¾²Ì¬ÄÚÈİ²ÉÓÃÆÕÍ¨¾²Ì¬ HTML Ò³ÃæµÄ·½Ê½±àĞ´¡£ 
+JSP æ˜¯ç®€ Servlet ç¼–å†™çš„ä¸€ç§æŠ€æœ¯, å®ƒå°† Java ä»£ç å’Œ HTML è¯­å¥æ··åˆåœ¨åŒä¸€ä¸ªæ–‡ä»¶ä¸­ç¼–å†™,
+åªå¯¹ç½‘é¡µä¸­çš„è¦åŠ¨æ€äº§ç”Ÿçš„å†…å®¹é‡‡ç”¨ Java ä»£ç æ¥ç¼–å†™ï¼Œè€Œå¯¹å›ºå®šä¸å˜çš„é™æ€å†…å®¹é‡‡ç”¨æ™®é€šé™æ€ HTML é¡µé¢çš„æ–¹å¼ç¼–å†™ã€‚ 
 
-2). Java Server Page: Java ·şÎñÆ÷¶ËÍøÒ³. ÔÚ HTML Ò³ÃæÖĞ±àĞ´ Java ´úÂëµÄÒ³Ãæ. 
+2). Java Server Page: Java æœåŠ¡å™¨ç«¯ç½‘é¡µ. åœ¨ HTML é¡µé¢ä¸­ç¼–å†™ Java ä»£ç çš„é¡µé¢. 
 
 2). helloworld: 
 
-ĞÂ½¨Ò»¸ö JSP Ò³Ãæ, ÔÚ body ½ÚµãÄÚµÄ <% %> ¼´¿É±àĞ´ Java ´úÂë.
+æ–°å»ºä¸€ä¸ª JSP é¡µé¢, åœ¨ body èŠ‚ç‚¹å†…çš„ <% %> å³å¯ç¼–å†™ Java ä»£ç .
 
 <body>
 
@@ -42,15 +42,15 @@ JSP ÊÇ¼ò Servlet ±àĞ´µÄÒ»ÖÖ¼¼Êõ, Ëü½« Java ´úÂëºÍ HTML Óï¾ä»ìºÏÔÚÍ¬Ò»¸öÎÄ¼şÖĞ±àĞ
 
 </body>
 
-3). JSP ¿ÉÒÔ·ÅÖÃÔÚ WEB Ó¦ÓÃ³ÌĞòÖĞµÄ³ıÁË WEB-INF ¼°Æä×ÓÄ¿Â¼ÍâµÄÆäËûÈÎºÎÄ¿Â¼ÖĞ,
-JSP Ò³ÃæµÄ·ÃÎÊÂ·¾¶ÓëÆÕÍ¨ HTML Ò³ÃæµÄ·ÃÎÊÂ·¾¶ĞÎÊ½Ò²ÍêÈ«Ò»Ñù¡£
+3). JSP å¯ä»¥æ”¾ç½®åœ¨ WEB åº”ç”¨ç¨‹åºä¸­çš„é™¤äº† WEB-INF åŠå…¶å­ç›®å½•å¤–çš„å…¶ä»–ä»»ä½•ç›®å½•ä¸­,
+JSP é¡µé¢çš„è®¿é—®è·¯å¾„ä¸æ™®é€š HTML é¡µé¢çš„è®¿é—®è·¯å¾„å½¢å¼ä¹Ÿå®Œå…¨ä¸€æ ·ã€‚
 
-4). JSPµÄÔËĞĞÔ­Àí: JSP ±¾ÖÊÉÏÊÇÒ»¸ö Servlet.
+4). JSPçš„è¿è¡ŒåŸç†: JSP æœ¬è´¨ä¸Šæ˜¯ä¸€ä¸ª Servlet.
 
-Ã¿¸öJSP Ò³ÃæÔÚµÚÒ»´Î±»·ÃÎÊÊ±, JSP ÒıÇæ½«Ëü·­Òë³ÉÒ»¸ö Servlet Ô´³ÌĞò, ½Ó×ÅÔÙ°ÑÕâ¸ö Servlet Ô´³ÌĞò±àÒë³É Servlet µÄ class ÀàÎÄ¼ş.
-È»ºóÔÙÓÉWEBÈİÆ÷£¨ServletÒıÇæ£©Ïñµ÷ÓÃÆÕÍ¨Servlet³ÌĞòÒ»ÑùµÄ·½Ê½À´×°ÔØºÍ½âÊÍÖ´ĞĞÕâ¸öÓÉJSPÒ³Ãæ·­Òë³ÉµÄServlet³ÌĞò¡£ 
+æ¯ä¸ªJSP é¡µé¢åœ¨ç¬¬ä¸€æ¬¡è¢«è®¿é—®æ—¶, JSP å¼•æ“å°†å®ƒç¿»è¯‘æˆä¸€ä¸ª Servlet æºç¨‹åº, æ¥ç€å†æŠŠè¿™ä¸ª Servlet æºç¨‹åºç¼–è¯‘æˆ Servlet çš„ class ç±»æ–‡ä»¶.
+ç„¶åå†ç”±WEBå®¹å™¨ï¼ˆServletå¼•æ“ï¼‰åƒè°ƒç”¨æ™®é€šServletç¨‹åºä¸€æ ·çš„æ–¹å¼æ¥è£…è½½å’Œè§£é‡Šæ‰§è¡Œè¿™ä¸ªç”±JSPé¡µé¢ç¿»è¯‘æˆçš„Servletç¨‹åºã€‚ 
 
-5). JSP Ò³ÃæµÄÒşº¬±äÁ¿: Ã»ÓĞÉùÃ÷¾Í¿ÉÒÔÊ¹ÓÃµÄ¶ÔÏó. JSPÒ³ÃæÒ»¹²ÓĞ 9 ¸öÒşº¬¶ÔÏó. 
+5). JSP é¡µé¢çš„éšå«å˜é‡: æ²¡æœ‰å£°æ˜å°±å¯ä»¥ä½¿ç”¨çš„å¯¹è±¡. JSPé¡µé¢ä¸€å…±æœ‰ 9 ä¸ªéšå«å¯¹è±¡. 
 
 public void _jspService(HttpServletRequest request, HttpServletResponse response)
         throws java.io.IOException, ServletException {
@@ -64,23 +64,23 @@ public void _jspService(HttpServletRequest request, HttpServletResponse response
 
 	//...
 	
-	//Ê¹ÓÃ  <% %> ±àĞ´µÄ´úÂëÔÚ´ËÎ»ÖÃ. ¿ÉÒÔÓÃµ½ request, response, pageContext, session
-	//application, config, out, page Õâ 8 ¸öÒşº¬¶ÔÏó. (Êµ¼ÊÉÏ»¹¿ÉÒÔÊ¹ÓÃÒ»¸ö½Ğ exception µÄÒşº¬¶ÔÏó)
+	//ä½¿ç”¨  <% %> ç¼–å†™çš„ä»£ç åœ¨æ­¤ä½ç½®. å¯ä»¥ç”¨åˆ° request, response, pageContext, session
+	//application, config, out, page è¿™ 8 ä¸ªéšå«å¯¹è±¡. (å®é™…ä¸Šè¿˜å¯ä»¥ä½¿ç”¨ä¸€ä¸ªå« exception çš„éšå«å¯¹è±¡)
     
 }
 
-¢Ù. request: HttpServletRequest µÄÒ»¸ö¶ÔÏó. *
-¢Ú. response: HttpServletResponse µÄÒ»¸ö¶ÔÏó(ÔÚ JSP Ò³ÃæÖĞ¼¸ºõ²»»áµ÷ÓÃ response µÄÈÎºÎ·½·¨.)
+â‘ . request: HttpServletRequest çš„ä¸€ä¸ªå¯¹è±¡. *
+â‘¡. response: HttpServletResponse çš„ä¸€ä¸ªå¯¹è±¡(åœ¨ JSP é¡µé¢ä¸­å‡ ä¹ä¸ä¼šè°ƒç”¨ response çš„ä»»ä½•æ–¹æ³•.)
 
-¢Û. pageContext: Ò³ÃæµÄÉÏÏÂÎÄ, ÊÇ PageContext µÄÒ»¸ö¶ÔÏó. ¿ÉÒÔ´Ó¸Ã¶ÔÏóÖĞ»ñÈ¡µ½ÆäËû 8 ¸öÒşº¬¶ÔÏó. Ò²¿ÉÒÔ´ÓÖĞ»ñÈ¡µ½µ±Ç°
-Ò³ÃæµÄÆäËûĞÅÏ¢. (Ñ§Ï°×Ô¶¨Òå±êÇ©Ê±Ê¹ÓÃËü) *
-¢Ü. session: ´ú±íä¯ÀÀÆ÷ºÍ·şÎñÆ÷µÄÒ»´Î»á»°, ÊÇ HttpSession µÄÒ»¸ö¶ÔÏó. ºóÃæÏêÏ¸Ñ§Ï°. *
+â‘¢. pageContext: é¡µé¢çš„ä¸Šä¸‹æ–‡, æ˜¯ PageContext çš„ä¸€ä¸ªå¯¹è±¡. å¯ä»¥ä»è¯¥å¯¹è±¡ä¸­è·å–åˆ°å…¶ä»– 8 ä¸ªéšå«å¯¹è±¡. ä¹Ÿå¯ä»¥ä»ä¸­è·å–åˆ°å½“å‰
+é¡µé¢çš„å…¶ä»–ä¿¡æ¯. (å­¦ä¹ è‡ªå®šä¹‰æ ‡ç­¾æ—¶ä½¿ç”¨å®ƒ) *
+â‘£. session: ä»£è¡¨æµè§ˆå™¨å’ŒæœåŠ¡å™¨çš„ä¸€æ¬¡ä¼šè¯, æ˜¯ HttpSession çš„ä¸€ä¸ªå¯¹è±¡. åé¢è¯¦ç»†å­¦ä¹ . *
 
-¢İ. application: ´ú±íµ±Ç° WEB Ó¦ÓÃ. ÊÇ ServletContext ¶ÔÏó. *
-¢Ş. config: µ±Ç° JSP ¶ÔÓ¦µÄ Servlet µÄ ServletConfig ¶ÔÏó(¼¸ºõ²»Ê¹ÓÃ). ÈôĞèÒª·ÃÎÊµ±Ç° JSP ÅäÖÃµÄ³õÊ¼»¯²ÎÊı, 
-ĞèÒªÍ¨¹ıÓ³ÉäµÄµØÖ·²Å¿ÉÒÔ.
+â‘¤. application: ä»£è¡¨å½“å‰ WEB åº”ç”¨. æ˜¯ ServletContext å¯¹è±¡. *
+â‘¥. config: å½“å‰ JSP å¯¹åº”çš„ Servlet çš„ ServletConfig å¯¹è±¡(å‡ ä¹ä¸ä½¿ç”¨). è‹¥éœ€è¦è®¿é—®å½“å‰ JSP é…ç½®çš„åˆå§‹åŒ–å‚æ•°, 
+éœ€è¦é€šè¿‡æ˜ å°„çš„åœ°å€æ‰å¯ä»¥.
 
-Ó³Éä JSP:
+æ˜ å°„ JSP:
 
   <servlet>
   	<servlet-name>hellojsp</servlet-name>
@@ -96,21 +96,21 @@ public void _jspService(HttpServletRequest request, HttpServletResponse response
 	<url-pattern>/hellojsp</url-pattern>  	
   </servlet-mapping>
   
-¢ß. out: JspWriter ¶ÔÏó. µ÷ÓÃ out.println() ¿ÉÒÔÖ±½Ó°Ñ×Ö·û´®´òÓ¡µ½ä¯ÀÀÆ÷ÉÏ. *
-¢à. page: Ö¸Ïòµ±Ç° JSP ¶ÔÓ¦µÄ Servlet ¶ÔÏóµÄÒıÓÃ, µ«Îª Object ÀàĞÍ, Ö»ÄÜµ÷ÓÃ Object ÀàµÄ·½·¨(¼¸ºõ²»Ê¹ÓÃ) 
+â‘¦. out: JspWriter å¯¹è±¡. è°ƒç”¨ out.println() å¯ä»¥ç›´æ¥æŠŠå­—ç¬¦ä¸²æ‰“å°åˆ°æµè§ˆå™¨ä¸Š. *
+â‘§. page: æŒ‡å‘å½“å‰ JSP å¯¹åº”çš„ Servlet å¯¹è±¡çš„å¼•ç”¨, ä½†ä¸º Object ç±»å‹, åªèƒ½è°ƒç”¨ Object ç±»çš„æ–¹æ³•(å‡ ä¹ä¸ä½¿ç”¨) 
 
-¢á. exception: ÔÚÉùÃ÷ÁË page Ö¸ÁîµÄ isErrorPage="true" Ê±, ²Å¿ÉÒÔÊ¹ÓÃ. *
+â‘¨. exception: åœ¨å£°æ˜äº† page æŒ‡ä»¤çš„ isErrorPage="true" æ—¶, æ‰å¯ä»¥ä½¿ç”¨. *
 
 <%@ page isErrorPage="true" %>
 
-pageContext, request, session, application(¶ÔÊôĞÔµÄ×÷ÓÃÓòµÄ·¶Î§´ÓĞ¡µ½´ó)
+pageContext, request, session, application(å¯¹å±æ€§çš„ä½œç”¨åŸŸçš„èŒƒå›´ä»å°åˆ°å¤§)
 out, response, config, page 
 exception
 
-6). JSPÄ£°æÔªËØ: JSPÒ³ÃæÖĞµÄ¾²Ì¬HTMLÄÚÈİ³Æ 
+6). JSPæ¨¡ç‰ˆå…ƒç´ : JSPé¡µé¢ä¸­çš„é™æ€HTMLå†…å®¹ç§° 
 
-7). JSP±í´ïÊ½£¨expression£©Ìá¹©ÁË½«Ò»¸ö java ±äÁ¿»ò±í´ïÊ½µÄ¼ÆËã½á¹ûÊä³öµ½¿Í»§¶ËµÄ¼ò»¯·½Ê½£¬
-Ëü½«ÒªÊä³öµÄ±äÁ¿»ò±í´ïÊ½Ö±½Ó·â×°ÔÚ<%= ºÍ %>Ö®ÖĞ¡£
+7). JSPè¡¨è¾¾å¼ï¼ˆexpressionï¼‰æä¾›äº†å°†ä¸€ä¸ª java å˜é‡æˆ–è¡¨è¾¾å¼çš„è®¡ç®—ç»“æœè¾“å‡ºåˆ°å®¢æˆ·ç«¯çš„ç®€åŒ–æ–¹å¼ï¼Œ
+å®ƒå°†è¦è¾“å‡ºçš„å˜é‡æˆ–è¡¨è¾¾å¼ç›´æ¥å°è£…åœ¨<%= å’Œ %>ä¹‹ä¸­ã€‚
 
 <% 
 	Date date = new Date();
@@ -119,8 +119,8 @@ exception
 
 <%= date %>
 
-8). JSP½Å±¾Æ¬¶Ï£¨scriptlet£©ÊÇÖ¸Ç¶Ì×ÔÚ<% ºÍ %>Ö®ÖĞµÄÒ»Ìõ»ò¶àÌõJava³ÌĞò´úÂë¡£ 
-¶à¸ö½Å±¾Æ¬¶ÏÖĞµÄ´úÂë¿ÉÒÔÏà»¥·ÃÎÊ
+8). JSPè„šæœ¬ç‰‡æ–­ï¼ˆscriptletï¼‰æ˜¯æŒ‡åµŒå¥—åœ¨<% å’Œ %>ä¹‹ä¸­çš„ä¸€æ¡æˆ–å¤šæ¡Javaç¨‹åºä»£ç ã€‚ 
+å¤šä¸ªè„šæœ¬ç‰‡æ–­ä¸­çš„ä»£ç å¯ä»¥ç›¸äº’è®¿é—®
 
 <% 
 	String ageStr = request.getParameter("age");
@@ -128,67 +128,67 @@ exception
 	
 	if(age >= 18){
 %>
-		³ÉÈË...
+		æˆäºº...
 <%
 	}else{
 %>
-		Î´³ÉÈË...
+		æœªæˆäºº...
 <%
 	}
 %>
 
-9). JSP ÉùÃ÷: JSP ÉùÃ÷½« Java ´úÂë·â×°ÔÚ<%£¡ºÍ %>Ö®ÖĞ£¬ËüÀïÃæµÄ´úÂë½«±»²åÈë½ø Servle tµÄ _jspService ·½·¨µÄÍâÃæ
-(ÔÚ JSP Ò³ÃæÖĞ¼¸ºõ´Ó²»ÕâÑùÊ¹ÓÃ)
+9). JSP å£°æ˜: JSP å£°æ˜å°† Java ä»£ç å°è£…åœ¨<%ï¼å’Œ %>ä¹‹ä¸­ï¼Œå®ƒé‡Œé¢çš„ä»£ç å°†è¢«æ’å…¥è¿› Servle tçš„ _jspService æ–¹æ³•çš„å¤–é¢
+(åœ¨ JSP é¡µé¢ä¸­å‡ ä¹ä»ä¸è¿™æ ·ä½¿ç”¨)
 
-10). JSP×¢ÊÍµÄ¸ñÊ½£º<%-- JSP ×¢ÊÍ --%> <!-- HTML ×¢ÊÍ -->
-Çø±ğ: JSP ×¢ÊÍ¿ÉÒÔ×èÖ¹ Java ´úÂëµÄÖ´ĞĞ. 
+10). JSPæ³¨é‡Šçš„æ ¼å¼ï¼š<%-- JSP æ³¨é‡Š --%> <!-- HTML æ³¨é‡Š -->
+åŒºåˆ«: JSP æ³¨é‡Šå¯ä»¥é˜»æ­¢ Java ä»£ç çš„æ‰§è¡Œ. 
 
 
-4. ÇëÇóµÄ×ª·¢ºÍÖØ¶¨Ïò:
+4. è¯·æ±‚çš„è½¬å‘å’Œé‡å®šå‘:
 
-1). ±¾ÖÊÇø±ğ: ÇëÇóµÄ×ª·¢Ö»·¢³öÁËÒ»´ÎÇëÇó, ¶øÖØ¶¨ÏòÔò·¢³öÁËÁ½´ÎÇëÇó. 
+1). æœ¬è´¨åŒºåˆ«: è¯·æ±‚çš„è½¬å‘åªå‘å‡ºäº†ä¸€æ¬¡è¯·æ±‚, è€Œé‡å®šå‘åˆ™å‘å‡ºäº†ä¸¤æ¬¡è¯·æ±‚. 
 
-¾ßÌå:
+å…·ä½“:
 
-¢Ù. ÇëÇóµÄ×ª·¢: µØÖ·À¸ÊÇ³õ´Î·¢³öÇëÇóµÄµØÖ·.
-       ÇëÇóµÄÖØ¶¨Ïò: µØÖ·À¸²»ÔÙÊÇ³õ´Î·¢³öµÄÇëÇóµØÖ·. µØÖ·À¸Îª×îºóÏìÓ¦µÄÄÇ¸öµØÖ· 
+â‘ . è¯·æ±‚çš„è½¬å‘: åœ°å€æ æ˜¯åˆæ¬¡å‘å‡ºè¯·æ±‚çš„åœ°å€.
+       è¯·æ±‚çš„é‡å®šå‘: åœ°å€æ ä¸å†æ˜¯åˆæ¬¡å‘å‡ºçš„è¯·æ±‚åœ°å€. åœ°å€æ ä¸ºæœ€åå“åº”çš„é‚£ä¸ªåœ°å€ 
        
-¢Ú. ÇëÇó×ª·¢: ÔÚ×îÖÕµÄ Servlet ÖĞ, request ¶ÔÏóºÍÖĞ×ªµÄÄÇ¸ö request ÊÇÍ¬Ò»¸ö¶ÔÏó. 
-       ÇëÇóµÄÖØ¶¨Ïò: ÔÚ×îÖÕµÄ Servlet ÖĞ, request ¶ÔÏóºÍÖĞ×ªµÄÄÇ¸ö request ²»ÊÇÍ¬Ò»¸ö¶ÔÏó.       
+â‘¡. è¯·æ±‚è½¬å‘: åœ¨æœ€ç»ˆçš„ Servlet ä¸­, request å¯¹è±¡å’Œä¸­è½¬çš„é‚£ä¸ª request æ˜¯åŒä¸€ä¸ªå¯¹è±¡. 
+       è¯·æ±‚çš„é‡å®šå‘: åœ¨æœ€ç»ˆçš„ Servlet ä¸­, request å¯¹è±¡å’Œä¸­è½¬çš„é‚£ä¸ª request ä¸æ˜¯åŒä¸€ä¸ªå¯¹è±¡.       
    
-¢Û. ÇëÇóµÄ×ª·¢: Ö»ÄÜ×ª·¢¸øµ±Ç° WEB Ó¦ÓÃµÄµÄ×ÊÔ´
-       ÇëÇóµÄÖØ¶¨Ïò: ¿ÉÒÔÖØ¶¨Ïòµ½ÈÎºÎ×ÊÔ´. 
+â‘¢. è¯·æ±‚çš„è½¬å‘: åªèƒ½è½¬å‘ç»™å½“å‰ WEB åº”ç”¨çš„çš„èµ„æº
+       è¯·æ±‚çš„é‡å®šå‘: å¯ä»¥é‡å®šå‘åˆ°ä»»ä½•èµ„æº. 
        
-¢Ü. ÇëÇóµÄ×ª·¢: / ´ú±íµÄÊÇµ±Ç° WEB Ó¦ÓÃµÄ¸ùÄ¿Â¼
-       ÇëÇóµÄÖØ¶¨Ïò: / ´ú±íµÄÊÇµ±Ç° WEB Õ¾µãµÄ¸ùÄ¿Â¼. 
+â‘£. è¯·æ±‚çš„è½¬å‘: / ä»£è¡¨çš„æ˜¯å½“å‰ WEB åº”ç”¨çš„æ ¹ç›®å½•
+       è¯·æ±‚çš„é‡å®šå‘: / ä»£è¡¨çš„æ˜¯å½“å‰ WEB ç«™ç‚¹çš„æ ¹ç›®å½•. 
        
 3. 
 
 -----------------------------------------------------------------------------
 
-ÔÚ MySQL Êı¾İ¿âÖĞ´´½¨Ò»¸ö test_users Êı¾İ±í, Ìí¼Ó 3 ¸ö×Ö¶Î: id, user, password. ²¢Â¼Èë¼¸Ìõ¼ÇÂ¼. 
+åœ¨ MySQL æ•°æ®åº“ä¸­åˆ›å»ºä¸€ä¸ª test_users æ•°æ®è¡¨, æ·»åŠ  3 ä¸ªå­—æ®µ: id, user, password. å¹¶å½•å…¥å‡ æ¡è®°å½•. 
 
-¶¨ÒåÒ»¸ö login.html, Àï±ß¶¨ÒåÁ½¸öÇëÇó×Ö¶Î: user, password. ·¢ËÍÇëÇóµ½ loginServlet
-ÔÚ´´½¨Ò»¸ö LoginServlet(ĞèÒª¼Ì³Ğ×Ô HttpServlet, ²¢ÖØĞ´Æä doPost ·½·¨), 
-ÔÚÆäÖĞ»ñÈ¡ÇëÇóµÄ user, password. 
+å®šä¹‰ä¸€ä¸ª login.html, é‡Œè¾¹å®šä¹‰ä¸¤ä¸ªè¯·æ±‚å­—æ®µ: user, password. å‘é€è¯·æ±‚åˆ° loginServlet
+åœ¨åˆ›å»ºä¸€ä¸ª LoginServlet(éœ€è¦ç»§æ‰¿è‡ª HttpServlet, å¹¶é‡å†™å…¶ doPost æ–¹æ³•), 
+åœ¨å…¶ä¸­è·å–è¯·æ±‚çš„ user, password. 
 
-ÀûÓÃ JDBC ´Ó test_users ÖĞ²éÑ¯ÓĞÃ»ÓĞºÍÒ³ÃæÊäÈëµÄ user, password ¶ÔÓ¦µÄ¼ÇÂ¼
+åˆ©ç”¨ JDBC ä» test_users ä¸­æŸ¥è¯¢æœ‰æ²¡æœ‰å’Œé¡µé¢è¾“å…¥çš„ user, password å¯¹åº”çš„è®°å½•
 
 SELECT count(id) FROM test_users WHERE user = ? AND password = ?
 
-ÈôÓĞ, ÏìÓ¦ Hello:xxx, ÈôÃ»ÓĞ, ÏìÓ¦ Sorry: xxx  xxx Îª user.
+è‹¥æœ‰, å“åº” Hello:xxx, è‹¥æ²¡æœ‰, å“åº” Sorry: xxx  xxx ä¸º user.
 
 -----------------------------------------------------------------------------
 
 2. HttpServlet:
 
-1). ÊÇÒ»¸ö Servlet, ¼Ì³Ğ×Ô GenericServlet. Õë¶ÔÓÚ HTTP Ğ­ÒéËù¶¨ÖÆ. 
+1). æ˜¯ä¸€ä¸ª Servlet, ç»§æ‰¿è‡ª GenericServlet. é’ˆå¯¹äº HTTP åè®®æ‰€å®šåˆ¶. 
 
-2). ÔÚ service() ·½·¨ÖĞÖ±½Ó°Ñ ServletReuqest ºÍ  ServletResponse ×ªÎª HttpServletRequest ºÍ HttpServletResponse.
-²¢µ÷ÓÃÁËÖØÔØµÄ service(HttpServletRequest, HttpServletResponse)
+2). åœ¨ service() æ–¹æ³•ä¸­ç›´æ¥æŠŠ ServletReuqest å’Œ  ServletResponse è½¬ä¸º HttpServletRequest å’Œ HttpServletResponse.
+å¹¶è°ƒç”¨äº†é‡è½½çš„ service(HttpServletRequest, HttpServletResponse)
 
-ÔÚ service(HttpServletRequest, HttpServletResponse) »ñÈ¡ÁËÇëÇó·½Ê½: request.getMethod(). ¸ù¾İÇëÇó·½Ê½ÓĞ´´½¨ÁË
-doXxx() ·½·¨(xxx Îª¾ßÌåµÄÇëÇó·½Ê½, ±ÈÈç doGet, doPost)
+åœ¨ service(HttpServletRequest, HttpServletResponse) è·å–äº†è¯·æ±‚æ–¹å¼: request.getMethod(). æ ¹æ®è¯·æ±‚æ–¹å¼æœ‰åˆ›å»ºäº†
+doXxx() æ–¹æ³•(xxx ä¸ºå…·ä½“çš„è¯·æ±‚æ–¹å¼, æ¯”å¦‚ doGet, doPost)
 
 @Override
  public void service(ServletRequest req, ServletResponse res)
@@ -208,10 +208,10 @@ doXxx() ·½·¨(xxx Îª¾ßÌåµÄÇëÇó·½Ê½, ±ÈÈç doGet, doPost)
 
 public void service(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException {
-	//1. »ñÈ¡ÇëÇó·½Ê½.
+	//1. è·å–è¯·æ±‚æ–¹å¼.
 	String method = request.getMethod();
 	
-	//2. ¸ù¾İÇëÇó·½Ê½ÔÙµ÷ÓÃ¶ÔÓ¦µÄ´¦Àí·½·¨
+	//2. æ ¹æ®è¯·æ±‚æ–¹å¼å†è°ƒç”¨å¯¹åº”çš„å¤„ç†æ–¹æ³•
 	if("GET".equalsIgnoreCase(method)){
 		doGet(request, response);
 	}else if("POST".equalsIgnoreCase(method)){
@@ -231,28 +231,28 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 	
 }
 
-3). Êµ¼Ê¿ª·¢ÖĞ, Ö±½Ó¼Ì³Ğ HttpServlet, ²¢¸ù¾İÇëÇó·½Ê½¸´Ğ´ doXxx() ·½·¨¼´¿É. 
+3). å®é™…å¼€å‘ä¸­, ç›´æ¥ç»§æ‰¿ HttpServlet, å¹¶æ ¹æ®è¯·æ±‚æ–¹å¼å¤å†™ doXxx() æ–¹æ³•å³å¯. 
 
-4). ºÃ´¦: Ö±½ÓÓÉÕë¶ÔĞÔµÄ¸²¸Ç doXxx() ·½·¨; Ö±½ÓÊ¹ÓÃ HttpServletRequest ºÍ  HttpServletResponse, ²»ÔÙĞèÒªÇ¿×ª. 
+4). å¥½å¤„: ç›´æ¥ç”±é’ˆå¯¹æ€§çš„è¦†ç›– doXxx() æ–¹æ³•; ç›´æ¥ä½¿ç”¨ HttpServletRequest å’Œ  HttpServletResponse, ä¸å†éœ€è¦å¼ºè½¬. 
 
 1. GenericServlet:
 
-1). ÊÇÒ»¸ö Serlvet. ÊÇ Servlet ½Ó¿ÚºÍ ServletConfig ½Ó¿ÚµÄÊµÏÖÀà. µ«ÊÇÒ»¸ö³éÏóÀà. ÆäÖĞµÄ service ·½·¨Îª³éÏó·½·¨
+1). æ˜¯ä¸€ä¸ª Serlvet. æ˜¯ Servlet æ¥å£å’Œ ServletConfig æ¥å£çš„å®ç°ç±». ä½†æ˜¯ä¸€ä¸ªæŠ½è±¡ç±». å…¶ä¸­çš„ service æ–¹æ³•ä¸ºæŠ½è±¡æ–¹æ³•
 
-2). Èç¹ûĞÂ½¨µÄ Servlet ³ÌĞòÖ±½Ó¼Ì³Ğ GenericSerlvet »áÊ¹¿ª·¢¸ü¼ò½à.
+2). å¦‚æœæ–°å»ºçš„ Servlet ç¨‹åºç›´æ¥ç»§æ‰¿ GenericSerlvet ä¼šä½¿å¼€å‘æ›´ç®€æ´.
 
-3). ¾ßÌåÊµÏÖ:
+3). å…·ä½“å®ç°:
 
-¢Ù. ÔÚ GenericServlet ÖĞÉùÃ÷ÁËÒ»¸ö SerlvetConfig ÀàĞÍµÄ³ÉÔ±±äÁ¿, ÔÚ init(ServletConfig) ·½·¨ÖĞ¶ÔÆä½øĞĞÁË³õÊ¼»¯ 
-¢Ú. ÀûÓÃ servletConfig ³ÉÔ±±äÁ¿µÄ·½·¨ÊµÏÖÁË ServletConfig ½Ó¿ÚµÄ·½·¨
-¢Û. »¹¶¨ÒåÁËÒ»¸ö init() ·½·¨, ÔÚ init(SerlvetConfig) ·½·¨ÖĞ¶ÔÆä½øĞĞµ÷ÓÃ, ×ÓÀà¿ÉÒÔÖ±½Ó¸²¸Ç init() ÔÚÆäÖĞÊµÏÖ¶Ô Servlet µÄ³õÊ¼»¯. 
-¢Ü. ²»½¨ÒéÖ±½Ó¸²¸Ç init(ServletConfig), ÒòÎªÈç¹ûÍü¼Ç±àĞ´ super.init(config); ¶ø»¹ÊÇÓÃÁË SerlvetConfig ½Ó¿ÚµÄ·½·¨,
-Ôò»á³öÏÖ¿ÕÖ¸ÕëÒì³£. 
-¢İ. ĞÂ½¨µÄ init(){} ²¢·Ç Serlvet µÄÉúÃüÖÜÆÚ·½·¨. ¶ø init(ServletConfig) ÊÇÉúÃüÖÜÆÚÏà¹ØµÄ·½·¨. 
+â‘ . åœ¨ GenericServlet ä¸­å£°æ˜äº†ä¸€ä¸ª SerlvetConfig ç±»å‹çš„æˆå‘˜å˜é‡, åœ¨ init(ServletConfig) æ–¹æ³•ä¸­å¯¹å…¶è¿›è¡Œäº†åˆå§‹åŒ– 
+â‘¡. åˆ©ç”¨ servletConfig æˆå‘˜å˜é‡çš„æ–¹æ³•å®ç°äº† ServletConfig æ¥å£çš„æ–¹æ³•
+â‘¢. è¿˜å®šä¹‰äº†ä¸€ä¸ª init() æ–¹æ³•, åœ¨ init(SerlvetConfig) æ–¹æ³•ä¸­å¯¹å…¶è¿›è¡Œè°ƒç”¨, å­ç±»å¯ä»¥ç›´æ¥è¦†ç›– init() åœ¨å…¶ä¸­å®ç°å¯¹ Servlet çš„åˆå§‹åŒ–. 
+â‘£. ä¸å»ºè®®ç›´æ¥è¦†ç›– init(ServletConfig), å› ä¸ºå¦‚æœå¿˜è®°ç¼–å†™ super.init(config); è€Œè¿˜æ˜¯ç”¨äº† SerlvetConfig æ¥å£çš„æ–¹æ³•,
+åˆ™ä¼šå‡ºç°ç©ºæŒ‡é’ˆå¼‚å¸¸. 
+â‘¤. æ–°å»ºçš„ init(){} å¹¶é Serlvet çš„ç”Ÿå‘½å‘¨æœŸæ–¹æ³•. è€Œ init(ServletConfig) æ˜¯ç”Ÿå‘½å‘¨æœŸç›¸å…³çš„æ–¹æ³•. 
 
 public abstract class GenericServlet implements Servlet, ServletConfig {
 
-	/** ÒÔÏÂ·½·¨Îª Servlet ½Ó¿ÚµÄ·½·¨ **/
+	/** ä»¥ä¸‹æ–¹æ³•ä¸º Servlet æ¥å£çš„æ–¹æ³• **/
 	@Override
 	public void destroy() {}
 
@@ -280,7 +280,7 @@ public abstract class GenericServlet implements Servlet, ServletConfig {
 	public abstract void service(ServletRequest arg0, ServletResponse arg1)
 			throws ServletException, IOException;
 
-	/** ÒÔÏÂ·½·¨Îª ServletConfig ½Ó¿ÚµÄ·½·¨ **/
+	/** ä»¥ä¸‹æ–¹æ³•ä¸º ServletConfig æ¥å£çš„æ–¹æ³• **/
 	@Override
 	public String getInitParameter(String arg0) {
 		return servletConfig.getInitParameter(arg0);
