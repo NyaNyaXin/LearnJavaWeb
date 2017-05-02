@@ -50,6 +50,7 @@ public class LoginServlet3 extends HttpServlet{
 				int count = resultSet.getInt(1);
 				if(count>0){
 					out.print("Hello:"+ username);
+					
 				}else{
 					out.print("Sorry:"+ username);
 				}
