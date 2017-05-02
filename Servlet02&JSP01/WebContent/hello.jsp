@@ -25,6 +25,16 @@
 		
 		System.out.println(session.getId());
 		System.out.println(application.getInitParameter("user"));
+		
+		System.out.println(config.getInitParameter("test"));
+		out.println(request.getParameter("name"));
+		out.println("<br/>");
+		out.println(application.getInitParameter("user"));
+		
+		out.println(this);
+		out.println(page);
+		
+		
 	%>
 </body>
 </html>
