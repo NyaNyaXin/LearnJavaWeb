@@ -14,7 +14,7 @@
   <!-- 配置Servlet -->
   <servlet>
   	<servlet-name>loginServlet</servlet-name>
-  	<servlet-class>com.cx.javaweb.LoginServlet</servlet-class>
+  	<servlet-class>com.cx.javaweb.LoginServlet3</servlet-class>
   </servlet>
   
   <servlet-mapping>
