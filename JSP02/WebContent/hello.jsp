@@ -8,5 +8,12 @@
 </head>
 <body>
 	Hello Page
+	
+	呵呵呵
+	<br><br>
+	<%
+		request.setCharacterEncoding("UTF-8");
+	%>
+	<%= request.getParameter("username") %>
 </body>
 </html>

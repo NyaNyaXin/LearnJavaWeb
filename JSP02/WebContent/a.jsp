@@ -15,8 +15,13 @@
 		DateFormat dataFormat = null;
 		HttpServletRequest httpServletRequest = null;
 		
-		int i = 10/0;
+		///int i = 10/0;
 	%>
+	
+	<form action="hello.jsp" method="get">
+		username:<input type="text" name="username">
+		<input type="submit" value="Submit"> 
+	</form>
 	
 </body>
 </html>
