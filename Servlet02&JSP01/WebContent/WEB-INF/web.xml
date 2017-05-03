@@ -38,4 +38,24 @@
     <servlet-name>TestAttr</servlet-name>
     <url-pattern>/testAttr</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ForwardServlet</display-name>
+    <servlet-name>ForwardServlet</servlet-name>
+    <servlet-class>com.cx.javaweb.ForwardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForwardServlet</servlet-name>
+    <url-pattern>/forwardServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestServlet</display-name>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.cx.javaweb.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/testServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
