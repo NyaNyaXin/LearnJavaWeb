@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JSP02</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <error-page>
+  	<!-- 指定出错的代码：404：没有指定的资源，500：内部错误 -->
+  	<error-code>404</error-code>
+  	<!-- 指定响应页面的位置 -->
+  	<location>/hello.jsp</location>
+  </error-page>
+  <error-page>
+  	<!-- 指定异常的类型 -->
+  	<exception-type>java.lang.ArithmeticException</exception-type>
+  	<location>/WEB-INF/error.jsp</location>
+  </error-page>
+</web-app>
