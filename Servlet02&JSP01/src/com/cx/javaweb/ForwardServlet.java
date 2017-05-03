@@ -18,6 +18,8 @@ public class ForwardServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("ForwardServlet's doGet Method。。。");
+		request.setAttribute("name", "abcde");
+		System.out.println("ForwardServlet's name:"+request.getAttribute("name"));
 		//请求的转发：
 		//1.调用HttpServletRequest的getRequestDispatcher()方法获取RequestDispatcher对象
 		String path="testServlet";

@@ -26,5 +26,9 @@
 	
 	<a href="attr_2.jsp">To Attr2 Page</a>
 	<a href="testAttr">To Attr Servlet</a>
+	
+	<%
+		request.getRequestDispatcher("attr_2.jsp").forward(request, response);
+	%>
 </body>
 </html>
