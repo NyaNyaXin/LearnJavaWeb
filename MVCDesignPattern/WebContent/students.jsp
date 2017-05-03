@@ -13,12 +13,13 @@
 		List<Student> students = (List<Student>) request.getAttribute("students");
 	%>
 
-	<table border="1px" align="center">
+	<table border="1px" cellpadding="10" cellspacing="0" align="center">
 		<tr>
 			<th>ID</th>
 			<th>Username</th>
 			<th>Password</th>
 			<th>Balance</th>
+			<th>Delete</th>
 		</tr>
 		<%
 			for (Student student : students) {
@@ -28,6 +29,7 @@
 			<td><%= student.getUserName() %></td>
 			<td><%= student.getPassWord() %></td>
 			<td><%= student.getBalance() %></td>
+			<td><a href="deleteStudent?id=<%=student.getId()%>">Delete</a> </td>
 		</tr>
 		<%
 			}

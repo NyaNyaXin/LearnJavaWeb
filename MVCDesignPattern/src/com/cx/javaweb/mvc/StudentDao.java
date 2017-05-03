@@ -59,4 +59,38 @@ public class StudentDao {
 		}
 		return students;
 	}
+	
+	public void deleteById(Integer id){
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			String driverClass = "com.mysql.jdbc.Driver";
+			String url = "jdbc:mysql:///javaweb";
+			String user = "root";
+			String password = "123456";
+			Class.forName(driverClass); 
+			connection = DriverManager.getConnection(url, user, password);
+			String sql = "DELETE FROM users WHERE id = ?";
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1,id);
+			preparedStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+ 			try {
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }

@@ -19,4 +19,14 @@
     <servlet-name>ListAllStudentsServlet</servlet-name>
     <url-pattern>/listAllStudents</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteStudentServlet</display-name>
+    <servlet-name>DeleteStudentServlet</servlet-name>
+    <servlet-class>com.cx.javaweb.mvc.DeleteStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteStudentServlet</servlet-name>
+    <url-pattern>/deleteStudent</url-pattern>
+  </servlet-mapping>
 </web-app>
