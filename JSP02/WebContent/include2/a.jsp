@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>BBB PAGE</h1>
-	<%=request.getParameter("abcd") %>
+<h1>AAA PAGE</h1>
+	<!-- 在a.jsp中包含b.jsp -->
+	<%--<jsp:include page="b.jsp"></jsp:include> --%>
+	
+	<jsp:forward page="/include/b.jsp">
+		<jsp:param value="abc" name="abcd"/>
+	</jsp:forward>
 </body>
 </html>

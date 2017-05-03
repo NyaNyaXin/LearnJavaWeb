@@ -8,6 +8,5 @@
 </head>
 <body>
 	<h1>BBB PAGE</h1>
-	<%=request.getParameter("abcd") %>
 </body>
 </html>
