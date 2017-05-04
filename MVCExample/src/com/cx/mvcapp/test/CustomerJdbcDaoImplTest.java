@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.cx.mvcapp.dao.CriteriaCustomer;
 import com.cx.mvcapp.dao.CustomerDao;
 import com.cx.mvcapp.dao.impl.CustomerJdbcDaoImpl;
 import com.cx.mvcapp.domain.Customer;
@@ -43,6 +44,13 @@ public class CustomerJdbcDaoImplTest {
 		long count = customerDao.getCountWithName("xin");
 		System.out.println(count);
 		
+	}
+	
+	@Test
+	public void testgetForListWithCriteriaCustomer(){
+		CriteriaCustomer cc = new CriteriaCustomer(null, null, null);
+		List<Customer> customers = customerDao.getForListWithCriteriaCustomer(cc);
+		System.out.println(customers);
 	}
 
 }

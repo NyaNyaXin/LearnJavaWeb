@@ -1,16 +1,23 @@
 package com.cx.mvcapp.servlet;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cx.mvcapp.dao.CriteriaCustomer;
+import com.cx.mvcapp.dao.CustomerDao;
+import com.cx.mvcapp.dao.impl.CustomerJdbcDaoImpl;
+import com.cx.mvcapp.domain.Customer;
+
 public class CustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private CustomerDao customerDao = new CustomerJdbcDaoImpl();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -70,6 +77,18 @@ public class CustomerServlet extends HttpServlet {
 
 	private void query(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("query");
+		//获取模糊查询的请求参数
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		String phone = request.getParameter("phone");
+		//把请求参数封装为一个CriteriaCustomer对象
+		CriteriaCustomer cc = new CriteriaCustomer(name, address, phone);
+		//1.调用CustomerDao的getForListWithCriteriaCustomer()方法得到Customer的集合
+		List<Customer> customers = customerDao.getForListWithCriteriaCustomer(cc);
+		//2.把Customer的集合放入到request中
+		request.setAttribute("customers", customers);
+		//3.转发页面到index.jsp(不能使用重定向)
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
 	private void addCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
