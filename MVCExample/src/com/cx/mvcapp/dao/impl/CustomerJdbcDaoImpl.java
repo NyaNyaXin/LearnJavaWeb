@@ -10,32 +10,34 @@ public class CustomerJdbcDaoImpl extends Dao<Customer> implements CustomerDao{
 
 	@Override
 	public List<Customer> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "SELECT id,name,address,phone FROM customers";
+		return getForList(sql);
 	}
 
 	@Override
 	public void save(Customer customer) {
-		// TODO Auto-generated method stub
-		
+		String sql = "INSERT INTO customers(name,address,phone) VALUES(?,?,?)";
+		update(sql, customer.getName(),customer.getAddress(),customer.getPhone());
 	}
 
 	@Override
 	public Customer get(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql ="SELECT id,name,address,phone FROM customers WHERE id = ?";
+		return get(sql, id);
 	}
 
 	@Override
 	public void delete(Integer id) {
-		// TODO Auto-generated method stub
+		String sql = "DELETE FROM customers WHERE id=?";
+		update(sql, id);
 		
 	}
 
 	@Override
 	public long getCountWithName(String name) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "SELECT COUNT(id) FROM customers WHERE name= ?";
+		
+		return getForValue(sql, name);
 	}
 
 }
