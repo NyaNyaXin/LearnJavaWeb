@@ -73,6 +73,17 @@ public class CustomerServlet extends HttpServlet {
 
 	private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("delete");
+		String idStr = request.getParameter("id");
+		int id = 0;
+		//作用：防止idStr不能转为int类型，若不能转，id=0，无法进行任何操作
+		try {
+			id = Integer.parseInt(idStr);
+			customerDao.delete(id);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		response.sendRedirect("query.do");
+		
 	}
 
 	private void query(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
