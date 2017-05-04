@@ -6,6 +6,16 @@ public class Customer {
 	private String address;
 	private String phone;
 
+	public Customer() {
+	}
+
+	public Customer(String name, String address, String phone) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.phone = phone;
+	}
+
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + "]";

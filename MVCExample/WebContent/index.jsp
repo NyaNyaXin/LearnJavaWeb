@@ -34,8 +34,8 @@
 				<td><input type="text" name="phone"></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Submit"></td>
-				<td><a href="">Add New Customer</a></td>
+				<td><input type="submit" value="QUERY"></td>
+				<td><a href="newcustomer.jsp">Add New Customer</a></td>
 			</tr>
 		</table>
 	</form>
