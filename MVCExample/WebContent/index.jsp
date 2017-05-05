@@ -9,10 +9,10 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="scripts/jquery-1.7.2.js"></script>
 <script type="text/javascript">
-	$(function () {
-		$(".delete").click(function () {
+	$(function() {
+		$(".delete").click(function() {
 			var content = $(this).parent().parent().find("td:eq(1)").text();
-			var flag = confirm("确定要删除"+content+"的信息吗？");
+			var flag = confirm("确定要删除" + content + "的信息吗？");
 			return flag;
 		});
 	})
@@ -62,13 +62,13 @@
 			for (Customer customer : customers) {
 		%>
 		<tr>
-			<td><%= customer.getId() %></td>
-			<td><%= customer.getName() %></td>
-			<td><%= customer.getAddress() %></td>
-			<td><%= customer.getPhone() %></td>
-			<td><a href="">UPDATE/</a> <a
-				href="delete.do?id=<%= customer.getId()%>" class="delete">DELETE</a>
-
+			<td><%=customer.getId()%></td>
+			<td><%=customer.getName()%></td>
+			<td><%=customer.getAddress()%></td>
+			<td><%=customer.getPhone()%></td>
+			<td>
+				<a href="edit.do?id=<%=customer.getId()%>">UPDATE/</a> 
+				<a href="delete.do?id=<%=customer.getId()%>" class="delete">DELETE</a>
 			</td>
 		</tr>
 		<%
