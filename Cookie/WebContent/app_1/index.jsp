@@ -14,7 +14,7 @@
 		if(name!=null&&!name.trim().equals("")){
 			
 			Cookie cookie = new Cookie("name",name);
-			cookie.setMaxAge(2);
+			cookie.setMaxAge(30);
 			response.addCookie(cookie);
 		}else{
 			//从 Cookie 中读取用户信息，若存在则打印欢迎信息
