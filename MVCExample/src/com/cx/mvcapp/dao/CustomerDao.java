@@ -18,6 +18,8 @@ public interface CustomerDao {
 	
 	public void delete(Integer id);
 	
+	public void update(Customer customer);
+	
 	/**
 	 * 返回和name相等的记录数
 	 * **/
