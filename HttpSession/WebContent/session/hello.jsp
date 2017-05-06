@@ -22,9 +22,9 @@
 	<%
 		session.setAttribute("username", request.getParameter("username"));
 	%>
-	<a href="login.jsp">重新登陆</a>
+	<a href="<%=response.encodeRedirectURL("login.jsp") %>">重新登陆</a>
 	&nbsp;&nbsp;&nbsp;
-	<a href="logout.jsp">注销登陆</a>
+	<a href="<%=response.encodeRedirectURL("logout.jsp") %>">注销登陆</a>
 	<br><br>
 </body>
 </html>

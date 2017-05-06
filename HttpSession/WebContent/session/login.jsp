@@ -25,7 +25,7 @@
 		}
 	%>
 	
-	<form action="hello.jsp" method="post">
+	<form action="<%=response.encodeRedirectURL("hello.jsp") %>" method="post">
 		username:<input type="text" name="username" value="<%=username%>"/>
 		<input type="submit" value="Submit">
 	</form>
