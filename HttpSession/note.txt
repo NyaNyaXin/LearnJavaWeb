@@ -1,4 +1,4 @@
-4. 使用 HttpSession 实现验证码
+ 4. 使用 HttpSession 实现验证码
 
 1). 基本原理: 和表单重复提交一致:
 
