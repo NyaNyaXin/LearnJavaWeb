@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<!-- 描述TLD文件 -->
+	<description>MyTag2 1.2 core library</description>
+	<display-name>MyTag2 core</display-name>
+	<tlib-version>1.2</tlib-version>
+	<!-- 建议在jsp页面上使用的标签的前缀 -->
+	<short-name>cx</short-name>
+	<!-- 作为tld文件的id，用来唯一表示当前的tld文件，多个tld文件的uri不能重复。通过jsp页面的taglib标签的uri属性来引用 -->
+	<uri>http://www.cx.com/mytag2/core</uri>
+
+	<tag>
+		<name>testJspFragment</name>
+		<tag-class>com.cx.javaweb.tag.TestJspFragment</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>printUpperTag</name>
+		<tag-class>com.cx.javaweb.tag.PrintUpperTag</tag-class>
+		<body-content>scriptless</body-content>
+
+		<attribute>
+			<name>time</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>forEachTag</name>
+		<tag-class>com.cx.javaweb.tag.ForEachTag</tag-class>
+		<body-content>scriptless</body-content>
+		
+		<attribute>
+			<name>items</name>
+			 <required>true</required>
+			 <rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>var</name>
+			 <required>true</required>
+			 <rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
