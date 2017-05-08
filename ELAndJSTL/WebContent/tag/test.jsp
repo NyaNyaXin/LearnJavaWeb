@@ -9,6 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<cx:hello/>
+	<cx:readerFile src="/WEB-INF/note.txt"/>
+	<br>
+	<cx:max num2="${param.num1}" num1="${param.num2}"/>
+	<br>
+	<cx:hello value="${param.name }" count="10"/>
 </body>
 </html>

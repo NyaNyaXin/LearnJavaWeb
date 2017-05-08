@@ -10,15 +10,75 @@
 	<short-name>cx</short-name>
 	<!-- 作为tld文件的id，用来唯一表示当前的tld文件，多个tld文件的uri不能重复。通过jsp页面的taglib标签的uri属性来引用 -->
 	<uri>http://www.cx.com/mytag/core</uri>
-	
+
 	<!-- 描述自定义的HelloSimpleTag标签 -->
 	<tag>
-		<!-- 标签名 ：在jsp页面上使用标签时的名字-->
+		<!-- 标签名 ：在jsp页面上使用标签时的名字 -->
 		<name>hello</name>
 		<!-- 标签所在的全类名 -->
 		<tag-class>com.cx.javaweb.tag.HelloSimpleTag</tag-class>
 		<!-- 标签体的类型 -->
 		<body-content>empty</body-content>
+
+		<!-- 描述当前标签的属性 -->
+		<attribute>
+			<!-- 属性名 -->
+			<name>value</name>
+			<!-- 该属性是否为必须 -->
+			<required>true</required>
+			<!-- rtexprvalue:runtime expression value 当前属性是否可以接收运行时表达式的动态值 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<!-- 属性名 -->
+			<name>count</name>
+			<!-- 该属性是否为必须 -->
+			<required>false</required>
+			<!-- rtexprvalue:runtime expression value 当前属性是否可以接收运行时表达式的动态值 -->
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
 	</tag>
+
+	<tag>
+		<!-- 标签名 ：在jsp页面上使用标签时的名字 -->
+		<name>max</name>
+		<!-- 标签所在的全类名 -->
+		<tag-class>com.cx.javaweb.tag.MaxTag</tag-class>
+		<!-- 标签体的类型 -->
+		<body-content>empty</body-content>
+
+		<!-- 描述当前标签的属性 -->
+		<attribute>
+			<!-- 属性名 -->
+			<name>num1</name>
+			<!-- 该属性是否为必须 -->
+			<required>true</required>
+			<!-- rtexprvalue:runtime expression value 当前属性是否可以接收运行时表达式的动态值 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<!-- 属性名 -->
+			<name>num2</name>
+			<!-- 该属性是否为必须 -->
+			<required>true</required>
+			<!-- rtexprvalue:runtime expression value 当前属性是否可以接收运行时表达式的动态值 -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+		
 	
+	<tag>
+		<name>readerFile</name>
+		<tag-class>com.cx.javaweb.tag.ReadFileTag</tag-class>
+		<body-content>empty</body-content>
+		
+		<attribute>
+			<name>src</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
 </taglib>
