@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -22,6 +23,10 @@
 	name:<jsp:getProperty property="name" name="customer"/>
 	
 	<br>
-	<a href="el2.jsp?score=89">To el2.jsp</a>
+	<a href="el2.jsp?score=89&name=a&name=b&name=c">To el2.jsp</a>
+	
+	<%
+		application.setAttribute("time", new Date());
+	%>
 </body>
 </html>
