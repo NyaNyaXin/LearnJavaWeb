@@ -5,6 +5,17 @@ public class Customer {
 	private int age;
 	private String name;
 
+	public Customer() {
+		super();
+	}
+
+	public Customer(Integer id, int age, String name) {
+		super();
+		this.id = id;
+		this.age = age;
+		this.name = name;
+	}
+
 	public Integer getId() {
 		return id;
 	}
