@@ -47,4 +47,16 @@
 			 <rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
+	
+	<tag>
+		<name>parentTag</name>
+		<tag-class>com.cx.javaweb.tag.ParentTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	
+	<tag>
+		<name>sonTag</name>
+		<tag-class>com.cx.javaweb.tag.SonTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
 </taglib>

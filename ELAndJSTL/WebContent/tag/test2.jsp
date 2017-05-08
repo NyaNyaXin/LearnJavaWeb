@@ -49,6 +49,18 @@
 	<cx:forEachTag items="${requestScope.customers }" var="cust">
 		${pageScope.cust.id } -- ${cust.name}<br> 
 	</cx:forEachTag>
+	<br>
+	<!-- 父标签打印name值到控制台 -->
+	<cx:parentTag>
+		<!-- 子标签以父标签的标签体的形式存在， 子标签把父标签的name属性打印到jsp页面上 -->
+		<cx:sonTag/>
+	</cx:parentTag>
+	<br>
 	
+	<c:choose>
+	 	<c:when test="${param.age>24}">大学毕业</c:when>
+	 	<c:when test="${param.age>20}">高中毕业</c:when>
+	 	<c:otherwise>高中以下。。。。</c:otherwise>
+	</c:choose>
 </body>
 </html>
