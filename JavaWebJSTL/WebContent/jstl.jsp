@@ -1,3 +1,7 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.cx.javaweb.entities.Customer"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -61,5 +65,56 @@
 		<c:when test="${param.age>18}">成年</c:when>
 		<c:otherwise>未成年</c:otherwise>
 	</c:choose>
+	<br>
+	<h4>c:forEach： 可以对数组,Collection,Map进行遍历,begin(对于集合begin从0开始算),end,step</h4>
+	<c:forEach begin="1" end="10" step="3" var="i">
+		${i } -- 
+	</c:forEach>
+	<br>
+	<%
+		List<Customer> customers = new ArrayList<Customer>();
+		customers.add(new Customer(1001,"AAA"));
+		customers.add(new Customer(1002,"BBB"));
+		customers.add(new Customer(1003,"CCC"));
+		customers.add(new Customer(1004,"DDD"));
+		customers.add(new Customer(1005,"EEE"));
+		customers.add(new Customer(1006,"FFF"));
+		customers.add(new Customer(1007,"GGG"));
+		customers.add(new Customer(1008,"HHH"));
+		customers.add(new Customer(1009,"III"));
+		customers.add(new Customer(1010,"JJJ"));
+		
+		request.setAttribute("customers", customers);
+	%>
+	<!-- 遍历Collection，遍历数组与之相同 -->
+	<c:forEach items="${requestScope.customers }" var="customer" begin="0" step="2" end="5" varStatus="status">
+		${status.index}--${status.count}--${status.first}--${status.last}--${customer.id }---${customer.name }<br>
+	</c:forEach>
+	<br>
+	<!-- 遍历Map -->
+	<%
+		Map<String,Customer> customers2 = new HashMap<String,Customer>();
+		customers2.put("a",new Customer(1001,"AAA"));
+		customers2.put("b",new Customer(1002,"BBB"));
+		customers2.put("c",new Customer(1003,"CCC"));
+		customers2.put("d",new Customer(1004,"DDD"));
+		customers2.put("e",new Customer(1005,"EEE"));
+		customers2.put("f",new Customer(1006,"FFF"));
+		customers2.put("g",new Customer(1007,"GGG"));
+		customers2.put("h",new Customer(1008,"HHH"));
+		customers2.put("i",new Customer(1009,"III"));
+		customers2.put("j",new Customer(1010,"JJJ"));
+		
+		request.setAttribute("customers2", customers2);
+	%>
+	<c:forEach items="${requestScope.customers2}" var="cust">
+		${cust.key }----${cust.value.id }---${cust.value.name }<br>
+	</c:forEach>
+	<br>
+	<h4>c:forTokens:用来处理字符串的，类似于String的split方法</h4>
+	<c:set value="a,b,c.d.e.f;g;h;i" var="test" scope="request"></c:set>
+	<c:forTokens items="${requestScope.test }" delims="." var="s">
+		${s }<br>
+	</c:forTokens>
 </body>
 </html>
