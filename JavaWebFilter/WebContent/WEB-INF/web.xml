@@ -23,14 +23,14 @@
 	<filter>
 		<filter-name>secondFilter</filter-name>
 		<filter-class>com.cx.javaweb.filters.SecondFilter</filter-class>
-		<init-param>
-			<param-name>username</param-name>
-			<param-value>Tom</param-value>
-		</init-param>
 	</filter>
 	<filter-mapping>
 		<filter-name>secondFilter</filter-name>
 		<url-pattern>/test.jsp</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
 	
 	<filter>

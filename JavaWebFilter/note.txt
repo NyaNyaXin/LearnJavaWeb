@@ -67,7 +67,7 @@
 
 或 <jsp:forward page="/..." /> 或 通过 page 指令的 errorPage 转发页面. <%@ page errorPage="test.jsp" %>
 
-②. INCLUDE：如果目标资源是通过RequestDispatcher的include()方法访问时，那么该过滤器将被调用。除此之外，该过滤器不会被调用。
+③. INCLUDE：如果目标资源是通过RequestDispatcher的include()方法访问时，那么该过滤器将被调用。除此之外，该过滤器不会被调用。
 
 或 <jsp:include file="/..." />
 
