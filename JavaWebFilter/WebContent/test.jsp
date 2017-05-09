@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>Test Page</h1>
+	<%
+		System.out.println("Test Jsp");
+	%>
 </body>
 </html>

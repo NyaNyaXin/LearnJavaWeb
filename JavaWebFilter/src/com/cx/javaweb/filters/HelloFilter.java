@@ -18,9 +18,10 @@ public class HelloFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.out.println("doFilter...");
+		System.out.println("Before HelloFilter's doFilter...");
 		//放行
 		chain.doFilter(request, response);
+		System.out.println("After HelloFilter's doFilter...");
 	}
 
 	@Override

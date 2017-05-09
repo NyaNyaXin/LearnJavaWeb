@@ -19,8 +19,10 @@ public class SecondFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
 			throws IOException, ServletException {
-		System.out.println("Second doFilter...");
+		System.out.println("Before SecondFilter's doFilter...");
+		//放行
 		arg2.doFilter(arg0, arg1);
+		System.out.println("After SecondFilter's doFilter...");
 	}
 
 	@Override
