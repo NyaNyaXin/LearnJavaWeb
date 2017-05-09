@@ -13,6 +13,29 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h4>
+		c:url:产生一个url地址。可以根据Cookie是否可用来智能进行Url重写，对GET请求的参数编码
+		可以把产生的URL存储在域对象的属性中
+		还可以使用c:param为URL添加参数，c:url会对参数进行自动的转码
+		value中的 /代表的是当前web应用的根目录
+	</h4>
+	<c:url value="/test.jsp" var="testurl" scope="page">
+		<c:param name="name" value="chenxin"></c:param>
+	</c:url>
+	URL:${testurl }
+	<br>
+	<h4>
+		c:redirect:使当前jsp页面重定向到指定页面.是当前jsp转发到指定的页面可以使用<br>
+			<%--
+			<jsp:forward page="test.jsp"></jsp:forward>
+			 --%>
+		/ 代表的是当前web应用的根目录<br>
+		response.sendRedirect("/")代表WEB站点的根目录
+	</h4>
+	<%--<c:redirect url="/test.jsp" ></c:redirect> --%>
+	<h4>c:import 可以包含任何页面到当前页面</h4>
+	<%--<c:import url="http://www.baidu.com"></c:import> --%>
+
 	<h4>c:out:可以对特殊字符进行转换</h4>
 	<%
 		request.setAttribute("book", "<<Java>>");
