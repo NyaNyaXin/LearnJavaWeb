@@ -2,7 +2,6 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -43,7 +42,10 @@
 
 	<br>
 	<br>
-	<c:if test="${!empty requestScope.customers }">
+	<%
+		List<Customer> customers = (List<Customer>) request.getAttribute("customers");
+		if (customers != null && customers.size() > 0) {
+	%>
 	<hr>
 	<br>
 	<br>
@@ -56,32 +58,29 @@
 			<th>DELETE/UPDATE</th>
 		</tr>
 
-		<c:forEach items="${requestScope.customers }" var="customer">
-		
-		
+		<%
+			for (Customer customer : customers) {
+		%>
 		<tr>
-			<td>${customer.id }</td>
-			<td>${customer.name }</td>
-			<td>${customer.address }</td>
-			<td>${customer.phone }</td>
+			<td><%=customer.getId()%></td>
+			<td><%=customer.getName()%></td>
+			<td><%=customer.getAddress()%></td>
+			<td><%=customer.getPhone()%></td>
 			<td>
-				<c:url value="/edit.do" var="editurl">
-					<c:param name="id" value="${customer.id }"></c:param>
-				</c:url>
-				<a href="${editurl}">UPDATE/</a> 
-				<c:url value="delete.do" var="deleteurl">
-					<c:param name="id" value="${customer.id }"></c:param>
-				</c:url>
-				<a href="${deleteurl}" class="delete">DELETE</a>
+				<a href="edit.do?id=<%=customer.getId()%>">UPDATE/</a> 
+				<a href="delete.do?id=<%=customer.getId()%>" class="delete">DELETE</a>
 			</td>
 		</tr>
-	
-		</c:forEach>
+		<%
+			}
+		%>
 
 
 	</table>
+	<%
+		}
+	%>
 
-</c:if>
 
 </body>
 </html>
