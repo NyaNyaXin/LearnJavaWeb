@@ -7,6 +7,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.cx.com/mytag2/core" prefix="cx"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -62,5 +63,13 @@
 	 	<c:when test="${param.age>20}">高中毕业</c:when>
 	 	<c:otherwise>高中以下。。。。</c:otherwise>
 	</c:choose>
+	
+	<br>
+	<!-- 使用一个EL的自定义函数 -->
+	${fn:length(param.name)}
+	<!-- 测试自定义的El自定义函数 -->
+	<br>
+	${cx:concat(param.str1,param.str2)}
+	
 </body>
 </html>
