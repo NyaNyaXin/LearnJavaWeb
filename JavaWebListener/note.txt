@@ -1,0 +1,217 @@
+7. HttpSessionActivationListener
+
+1). 监听实现了该接口和 Serializable 接口的 Java 类的对象随 session 钝化和活化事件
+
+	> 活化: 从磁盘中读取 session 对象
+	
+	> 钝化: 向磁盘中写入 session 对象
+	
+	> session 对象存储在tomcat 服务器的 work\Catalina\localhost\contextPath 目录下. SESSION.SER
+	
+2). 该监听器不需要在 web.xml 文件中进行配置. 
+
+3). 
+//在活化之后被调用. 
+public void sessionDidActivate(HttpSessionEvent se)
+
+//在钝化之前被调用
+public void sessionWillPassivate(HttpSessionEvent se)
+
+HttpSessionEvent: getSession()
+
+4). 该监听器较少被使用. 
+
+6. HttpSessionBindingListener
+
+1). 监听实现了该接口的 Java 类的对象被绑定到 session 或从 session 中解除绑定的事件.
+
+//当前对象被绑定到 session 时调用该方法
+public void valueBound(HttpSessionBindingEvent event) 
+
+//当前对象从 session 中解除绑定调用该方法
+public void valueUnbound(HttpSessionBindingEvent event) 
+
+2). 注意: 该监听器不需要在 web.xml 文件中进行配置. 
+
+3). HttpSessionBindingEvent:
+
+getName()
+getValue()
+getSession()
+
+4). 该监听器较少被使用. 
+
+5.  XxxAttributeListener
+
+1). 监听 ServletContext, HttpSession, ServletRequest 中添加属性, 替换属性, 移除属性的事件监听器. 
+
+2). 以 ServletRequestAttributeListener 为例:
+
+//添加属性时被调用
+public void attributeAdded(ServletRequestAttributeEvent srae) {
+	System.out.println("向 request 中添加了一个属性...");
+}
+
+//移除属性时被调用
+@Override
+public void attributeRemoved(ServletRequestAttributeEvent srae) {
+	System.out.println("从 request 中移除了一个属性...");
+}
+
+//替换属性时被调用. 
+@Override
+public void attributeReplaced(ServletRequestAttributeEvent srae) {
+	System.out.println("request 中属性替换了...");
+}
+
+3). 这三个 ServletContextAttributeListener,
+	ServletRequestAttributeListener, HttpSessionAttributeListener 监听器较少被使用. 
+
+4). API:
+
+ServletRequestAttributeEvent:
+	
+	> getName(): 获取属性的名字
+	> getValue(): 获取属性的值. 
+
+4. ServletRequestListener & HttpSessionListener
+
+1). 和 ServletContextListener 类似。 
+
+2). 利用 ServletRequestListener、HttpSessionListener 以及 ServletContextListener 可以把 request, session
+及 application 的生命周期进一步的做一了解. 
+
+	> request: 是一个请求, 当一个响应返回时, 即被销毁. 当发送一个请求时被创建. 注意, 请求转发的过程是一个 request 对象.
+	重定向是两个请求
+	
+	> session: 当第一次访问 WEB 应用的一个 JSP 或 Servlet 时, 且该 JSP 或 Servlet 中还需要创建 session 对象. 此时服务器会
+	创建一个 session 对象. 
+	
+	  session 销毁: session 过期, 直接调用 session 的 invalidate 方法, 当前 web 应用被卸载(session 可以被持久化).
+	  
+	  * 关闭浏览器, 并不意味着 session 被销毁, 还可以通过 sessionid 找到服务器中的 session 对象.  
+
+		JSESSIONID=F4119DE0FC93ED38E8EC83B24CFA3B81
+		http://localhost:8989/day_40/session.jsp;jsessionid=F4119DE0FC93ED38E8EC83B24CFA3B81
+		
+	> application: 贯穿于当前的 WEB 应用的生命周期. 当前 WEB 应用被加载时创建 application 对象, 当前 WEB 应用被卸载时
+	销毁 application 对象.
+
+3. ServletContextListener:
+
+1). what: 监听 ServletContext 对象被创建或销毁的 Servlet 监听器
+
+2). how:
+
+	> 创建一个实现了 ServletContextListener 的类, 并且实现其中的两个方法
+	
+	public class HelloServletContextListner implements ServletContextListener
+	
+	> 在 web.xml 文件中配置 Listener
+	
+	<listener>
+		<listener-class>com.atguigu.javaweb.test.HelloServletContextListner</listener-class>
+	</listener>
+	
+3). why: ServletContextListener 是最常用的 Listener, 可以在当前 WEB 应用被加载时对当前 WEB 应用的相关资源进行初始化操作:
+创建数据库连接池, 创建 Spring 的 IOC 容器, 读取当前 WEB 应用的初始化参数 ...
+
+4). API: 
+
+	// SerlvetContext 对象被创建(即, 当前 WEB 应用被加载时)的时候, Servlet 容器调用该方法. 
+	public void contextInitialized(ServletContextEvent sce) 
+
+	// SerlvetContext 对象被销毁之前(即, 当前 WEB 应用被卸载时)的时候, Servlet 容器调用该方法. 
+	public void contextDestroyed(ServletContextEvent sce) 
+	
+	ServletContextEvent 中的: getServletContext() 获取 ServletContext 
+
+2. About JavaWEB
+
+JavaSE
+
+SQL
+PL\SQL
+JDBC
+
+Html 
+
+JavaScript 
+jQuery             不熟练
+ 
+XML, 
+XML 解析(使用 DOM4J - 学习 Spring 的时候)
+
+Servlet: 用于做 MVC 中的 Controller, 接受请求, 调用方法, 响应页面
+JSP: 用于显示, 需要结合 EL 和 JSTL
+EL, 
+JSTL,
+MVC 
+HttpSession: 表示用于会话. pageContext, request, session, application, response, out, config, page, exception
+JDBC(DBUtils, 数据库连接池),
+Filter
+
+Cookie, 
+自定义标签, 
+
+----------------------
+
+Listener
+文件的上传下载
+国际化
+
+Ajax
+
+ATGUIGU 网上商城
+
+----------------------
+
+Struts2, Spring, Hibernate 
+WebService, 第一个 JavaEE 项目.
+
+-----------------------
+
+JBPM, SpringMVC, SpringSecurity, 第二个 JavaEE 项目
+
+-----------------------
+
+Android, Android 的 2 个项目
+
+-----------------------
+
+
+
+1. request.getParameter() VS request.getAttribute() 
+
+1). request.getParameter() 获取 GET、POST 请求的请求参数的值. 返回值一定是 String 类型. 
+
+	> 表单
+	> URL 后边的 ? 后面附着的值 index.jsp?name=tom
+
+2). request.getAttribute() 获取 request 域中的属性值, 一定是先有 setAttribute(name, value). 然后再通过 
+request.getAttribute(name) 获取属性值. 且属性值可以是任意类型. 
+
+2. 以下 equals 方法中的
+
+if (getClass() != obj.getClass())
+	return false;
+	
+1). 可以省略吗? 不能省略, 若省略则, 下边的强制类型转换可能会出现异常. 
+2). 比较两个对象是否相等不是使用 equals 吗, 为什么使用 == 了呢? 每个类的 Class 对象只有一个! 所以可以使用 == 
+
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Authority other = (Authority) obj;
+	if (url == null) {
+		if (other.url != null)
+			return false;
+	} else if (!url.equals(other.url))
+		return false;
+	return true;
+}
+
