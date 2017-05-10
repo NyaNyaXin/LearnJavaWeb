@@ -1,4 +1,4 @@
-7. HttpSessionActivationListener
+ 7. HttpSessionActivationListener
 
 1). 监听实现了该接口和 Serializable 接口的 Java 类的对象随 session 钝化和活化事件
 

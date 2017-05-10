@@ -9,5 +9,11 @@
 <body>
 	<h4>Index Page</h4>
 	<a href="test.jsp">To test Page</a>
+	<%--
+		request.setAttribute("requestKey", "requestValue");
+		<jsp:forward page="/test.jsp"></jsp:forward>
+	--%>
+	<br>
+	<a href="testServlet">Test Servlet</a>
 </body>
 </html>
