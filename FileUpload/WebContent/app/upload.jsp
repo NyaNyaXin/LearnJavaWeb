@@ -48,7 +48,7 @@
 	<br>
 
 
-	<form action="UploadServlet" method="post"
+	<form action="fileUploadServlet" method="post"
 		enctype="multipart/form-data">
 		<input type="hidden" id="fileNum" name="fileNum" value="1">
 

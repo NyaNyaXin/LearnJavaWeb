@@ -19,4 +19,17 @@
     <servlet-name>UploadServlet</servlet-name>
     <url-pattern>/uploadServlet</url-pattern>
   </servlet-mapping>
+  <listener>
+    <listener-class>com.cx.javaweb.fileupload.app.listeners.FileUploadAppListener</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>FileUploadServlet</display-name>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <servlet-class>com.cx.javaweb.fileupload.app.servlets.FileUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <url-pattern>/app/fileUploadServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
