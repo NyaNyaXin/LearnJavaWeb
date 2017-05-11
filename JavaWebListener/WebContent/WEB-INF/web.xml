@@ -3,6 +3,11 @@
   <listener>
     <listener-class>com.cx.javaweb.listeners.HelloServletContextListener</listener-class>
   </listener>
+  
+  <listener>
+  	<listener-class>com.cx.javaweb.listeners.TestAttributeListener</listener-class>
+  </listener>
+  
   <servlet>
     <description></description>
     <display-name>TestServlet</display-name>
